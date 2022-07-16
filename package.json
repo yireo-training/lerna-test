@@ -1,0 +1,23 @@
+{
+  "name": "root",
+  "private": true,
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node ./index.js",
+    "watch": "postcss --watch --verbose src/input.css --output src/output.css",
+    "foobar-watch": "foobar --watch --verbose src/input.css --output src/output.css",
+    "build": "postcss --verbose src/input.css --output src/output.css",
+    "foobar-build": "foobar --verbose src/input.css --output src/output.css"
+  },
+  "devDependencies": {
+    "lerna": "^5.1.8"
+  },
+  "dependencies": {
+    "foobar": "file:custom/foobar",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0"
+  }
+}
